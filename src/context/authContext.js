@@ -20,7 +20,7 @@ export const useAuth = () => {
 };
 
 export function AuthProvider({ children }) {
-  const serverBaseUrl = window.location.origin + "/api/";
+  const serverBaseUrl = "https://whatssive-api.onrender.com/api/";
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
   const [myMessages, setMyMessages] = useState([]);
