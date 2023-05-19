@@ -8,7 +8,7 @@ export default function Instrucciones(props) {
             {
                 props.type === "message" ? (
                     <div className='col mt-4' style={{ color: 'gray' }}>
-                        <h2>Instrucciones</h2>
+                        <h2>¿Cómo enviar mensajes?</h2>
                         <p>En la primera caja deberás escribir el mensaje que quieras enviar a tus contactos.</p>
                         <p>Puedes usar el botón de <b>B</b> para que el texto seleccionado se envíe en formato de negrita en whatsapp.</p>
                         <p>También puedes usar el botón de <b><i>I</i></b> para que el texto que selecciones se envíe en formato de cursiva en whatsapp.</p>

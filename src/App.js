@@ -1,5 +1,5 @@
 import "./App.css";
-import Navbar from "./components/Navbar";
+import NavigationBar from "./components/Navbar";
 import Main from "./components/Main";
 import Signup from "./components/Signup";
 import Login from "./components/Login";
@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="App">
       <AuthProvider>
-        <Navbar />
+        <NavigationBar />
         <Routes>
           <Route path="/" exact element={<Main />} />
           <Route

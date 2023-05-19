@@ -98,7 +98,7 @@ export default function InputBox(props) {
     /* CREA LOS LINKS PARA LOS NUEVOS MENSAJES DE WHATSAPP */
     function createLinks() {
         processedPhones.forEach(phone => {
-            props.setWhatsappLinks(oldArray => [...oldArray, { "telefono": phone, "enlace": "https://api.whatsapp.com/send?phone=" + phone + "&text=" + encodeURIComponent(message) }]);
+            props.setWhatsappLinks(oldArray => [...oldArray, { "telefono": phone, "enlace": "whatsapp://send?phone=" + phone + "&text=" + encodeURIComponent(message) }]);
 
         })
     }
@@ -196,7 +196,7 @@ export default function InputBox(props) {
             <ToastContainer />
             <div className='border border-dark border-2 textAreaBox mt-4'>
                 <div className='row'>
-                    <div className="input-group input-group-lg">
+                    <div className="input-group input-group-lg px-3 py-1">
                         <textarea id='messageTextArea' placeholder={props.type === "messageBox" ? "Pon tu mensaje aquí" : props.type === "phoneBox" ? "Números telefónicos" : ""} style={{ border: "none", outline: "none", width: "100%" }} className="p-2 textAreaBox" rows={rows} value={props.type === "messageBox" ? message : props.type === "phoneBox" ? preProcessedPhones : ""} onChange={(event) => props.type === "messageBox" ? setMessage(event.target.value) : props.type === "phoneBox" ? setPreProcessedPhones(event.target.value) : ""} spellCheck="true"></textarea>
                     </div>
                 </div>
