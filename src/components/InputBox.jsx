@@ -98,7 +98,7 @@ export default function InputBox(props) {
     /* CREA LOS LINKS PARA LOS NUEVOS MENSAJES DE WHATSAPP */
     function createLinks() {
         processedPhones.forEach(phone => {
-            props.setWhatsappLinks(oldArray => [...oldArray, { "telefono": phone, "enlace": "whatsapp://send?phone=" + phone + "&text=" + encodeURIComponent(message) }]);
+            props.setWhatsappLinks(oldArray => [...oldArray, { "telefono": phone, "enlace": "https://api.whatsapp.com/send?phone=" + phone + "&text=" + encodeURIComponent(message) }]);
 
         })
     }

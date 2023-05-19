@@ -19,14 +19,7 @@ export default function Row(props) {
         <tr className={checked ? "table-success" : ""}>
             <th scope="row">{props.index + 1}</th>
             <td>+{props.link.telefono}</td>
-            <td><a href="#" ><FiSend size={30} style={{ color: "pink" }} onClick={() => {
-                handleChecked(props.index); 
-                window.open(props.link.enlace, "Test1")
-                setTimeout(() => {
-                    window.open(props.link.enlace, "Horror")
-
-                }, 500)
-            }} /></a></td>
+            <td><a href={props.link.enlace} target="_blank"><FiSend size={30} style={{ color: "pink" }} onClick={() => handleChecked(props.index)} /></a></td>
             <td className='text-center'>
                 <div className="form-check d-flex justify-content-center align-items-center">
                     <input className="form-check-input text-end" type="checkbox" checked={checked} id={"prueba" + props.index} onChange={() => handleChecked(props.index)} />
